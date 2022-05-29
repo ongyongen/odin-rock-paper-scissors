@@ -2,11 +2,19 @@
 <html>
     <head>
         <title>Title of the document</title>
-        <script src="scripts.js"></script>
+        <script src="scripts.js" defer></script>
     </head>
-
     <body>
-        <p>The content of the document...</p>
+        <div class="container">
+            <button id="choice">rock</button>
+            <button id="choice">paper</button>
+            <button id="choice">scissors</button>
+            <button id="reset">reset</button>
+            <p id="player-selection">Your selection: </p>
+            <p id="computer-selection">Computer selection:</p>
+            <p id="round-winner">Round winner: </p>
+            <p id="player-total-wins">Nos of rounds you won: </p>
+            <p id="computer-total-wins">Nos of rounds computer won:</p>
+        </div>
     </body>
-
 </html>
