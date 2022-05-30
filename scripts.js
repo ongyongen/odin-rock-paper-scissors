@@ -3,7 +3,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 // Buttons for user to choose between rock / paper / scissors
-const choiceButtons = document.querySelectorAll("button#choice")
+const choiceButtons = document.querySelectorAll("button.choice")
 choiceButtons.forEach((button) => {
     button.addEventListener('click', (e) => {
         let playerChoice = button.textContent
@@ -55,11 +55,11 @@ resetButton.addEventListener('click', () => {
 
 // Update score tally after each round
 function updateScoreboard(winner) {
-    if (winner == 'Player') {
+    if (winner == 'player') {
         playerScore += 1;
         let playerScoreElem = document.querySelector('#player-total-wins')
         playerScoreElem.textContent = `Nos of rounds you won: ${playerScore}`
-    } else if (winner == 'Computer') {
+    } else if (winner == 'computer') {
         computerScore += 1;
         let computerScoreElem = document.querySelector('#computer-total-wins')
         computerScoreElem.textContent = `Nos of rounds computer won: ${computerScore}`
@@ -82,13 +82,13 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase()
     if (playerSelection == computerSelection) {
-        return 'It is a draw!'
+        return 'it is a draw!'
     } else if ( playerSelection == 'rock' && computerSelection == 'scissors' || 
                 playerSelection == 'scissors' && computerSelection == 'paper' ||
                 playerSelection == 'paper' && computerSelection == 'rock' ) {
-        return 'Player'
+        return 'player'
     } else {
-        return 'Computer'
+        return 'computer'
     }
 }
 

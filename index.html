@@ -2,19 +2,44 @@
 <html>
     <head>
         <title>Title of the document</title>
+        <link rel="stylesheet" href="styles.css">
         <script src="scripts.js" defer></script>
     </head>
     <body>
         <div class="container">
-            <button id="choice">rock</button>
-            <button id="choice">paper</button>
-            <button id="choice">scissors</button>
-            <button id="reset">reset</button>
-            <p id="player-selection">Your selection: </p>
-            <p id="computer-selection">Computer selection:</p>
-            <p id="round-winner">Round winner: </p>
-            <p id="player-total-wins">Nos of rounds you won: </p>
-            <p id="computer-total-wins">Nos of rounds computer won:</p>
-        </div>
+            <div class="header">
+                <h1 id="header-title">Rock - Paper - Scissors!</h1>
+                <img id="cat" src="../img/cat.png">
+            </div>
+            <div class="gameBoard">
+                <div class="choices">
+                    <div class="div-images">
+                        <img class="choice" src="./img/rock.png">
+                        <img class="choice" src="./img/paper.png">
+                        <img class="choice" src="./img/scissors.png">
+                        <img class="choice" src="./img/rainbow.png">
+                    </div>
+                    <div class="div-buttons">
+                        <button class="choice">rock</button>
+                        <button class="choice">paper</button>
+                        <button class="choice">scissors</button>
+                        <button id="reset">reset</button>
+                    </div>
+                </div>
+                <div class="scoreboard">
+                    <div class="currentRound">
+                        <h1>Round Scores</h1>
+                        <p id="player-selection">Your selection: </p>
+                        <p id="computer-selection">Computer selection:</p>
+                        <p id="round-winner">Round winner: </p>
+                    </div>
+                    <div class="overallRounds">
+                        <h1>Overall Scores</h1>
+                        <p id="player-total-wins">Nos of rounds you won: 0</p>
+                        <p id="computer-total-wins">Nos of rounds computer won: 0</p>
+                    </div>
+                   
+                </div>
+            </div>
     </body>
 </html>
